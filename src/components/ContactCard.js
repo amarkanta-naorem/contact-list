@@ -1,8 +1,8 @@
 import { LuStar } from "react-icons/lu";
 import { useState } from "react";
 
-function ContactCard({ contact }) {
-    const [isFavorite, setIsFavorite] = useState(contact.favorite)
+function ContactCard({ contact, toggleFavorite }) {
+    // const [isFavorite, setIsFavorite] = useState(contact.favorite)
     return (
         <div className="card-content">
             <div className="card">
@@ -10,8 +10,8 @@ function ContactCard({ contact }) {
                 <p>{contact.phone}</p>
             </div>
             <LuStar
-                className={`star ${isFavorite && "yellow-star"}`}
-                onClick={() => setIsFavorite(!isFavorite)}
+                className={`star ${contact.favorite && "yellow-star"}`}
+                onClick={() => toggleFavorite(contact.id)}
             />
         </div>
     );

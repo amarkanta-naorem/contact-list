@@ -4,7 +4,7 @@ function TotalFavorite ({ contacts }) {
 
     for (let i = 0; i < contacts.length; i++) {
         if (contacts[i].favorite === true) {
-            totalFavorite = totalFavorite + i
+            totalFavorite = totalFavorite + 1
         }
     }
 
