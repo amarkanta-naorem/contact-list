@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ContactCard from "./components/ContactCard";
 import LayoutSwitcher from "./components/LayoutSwitcher";
+import TotalFavorite from "./components/TotalFavorite";
 
 function App() {
 
@@ -15,9 +16,12 @@ function App() {
   return (
     <>
       <LayoutSwitcher isSwitch={isSwitch} setIsSwitch={setIsSwitch} />
+      
+      <TotalFavorite contacts={contacts} />
+
       <div className={`${isSwitch ? "content" : "container"}`}>
-        {contacts.map((contact) => (
-          <ContactCard key={contact.id} contact={contact} />
+        {contacts.map((item) => (
+          <ContactCard key={item.id} contact={item} />
         ))}
       </div>
     </>
