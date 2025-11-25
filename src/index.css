@@ -1,34 +1,3 @@
-.container {
-    display: flex;
-    gap: 2rem;
-}
-
-.content {
-    display: grid;
-    grid-row: auto;
-}
-
-.card-content {
-    position: relative;
-}
-
-.card {
-    position: relative;
-    background: #83c5be;
-    padding: 0 1rem;
-    width: 15rem;
-    height: 8rem;
-    border-radius: 10px;
-}
-
-.star {
-    position: absolute;
-    top: 25px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.yellow-star {
-    color: yellow;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -9,7 +9,7 @@ function TotalFavorite ({ contacts }) {
     }
 
     return (
-        <p>Total Favorite: {totalFavorite}</p>
+        <p className="my-5">Total Favorite: <span className="bg-teal-600 p-2 rounded-full">{totalFavorite}</span></p>
     );
 }
 
